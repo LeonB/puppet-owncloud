@@ -1,0 +1,17 @@
+<?php
+$CONFIG = array (
+  'overwritewebroot' => '/owncloud',
+  'passwordsalt' => '<%= scope.lookupvar('owncloud::server::passwordsalt') %>',
+  'datadirectory' => '<%= scope.lookupvar('owncloud::server::data_dir') %>',
+  'dbtype' => 'mysql',
+  'appstoreenabled' => false,
+  'writable_appsdir' => false,
+  'dbname' => '<%= scope.lookupvar('owncloud::server::mysql_database') %>',
+  'dbhost' => '<%= scope.lookupvar('owncloud::server::mysql_host') %>',
+  'dbtableprefix' => 'oc_',
+  'dbuser' => '<%= scope.lookupvar('owncloud::server::mysql_user') %>',
+  'dbpassword' => '<%= scope.lookupvar('owncloud::server::mysql_password') %>',
+  'loglevel' => '3',
+  'installed' => true,
+  'instanceid' => '<%= scope.lookupvar('owncloud::server::instanceid') %>',
+);

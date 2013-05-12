@@ -16,9 +16,18 @@ class owncloud::server::params {
 
 	### Application related parameters
 
-	$package_name = $::operatingsystem ? {
+	$packages = $::operatingsystem ? {
 		default => 'owncloud'
 	}
+
+	$path = '/usr/share/owncloud'
+	$data_dir = '/var/lib/owncloud'
+
+	$user           = 'owncloud'
+	$passwordsalt   = undef
+    $mysql_database = 'owncloud'
+	$mysql_user     = 'owncloud'
+	$mysql_host     = 'localhost'
 
 	$enabled = true
 
