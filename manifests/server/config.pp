@@ -27,7 +27,7 @@ class owncloud::server::config {
   #  }
 
   nginx::vhost::snippet { 'owncloud':
-    ensure  => $owncloud::ensure
+    ensure  => $owncloud::ensure,
     vhost   => 'default',
     content => template('owncloud/nginx_vhost_subdirectory.erb'),
   }
